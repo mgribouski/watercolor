@@ -39,10 +39,10 @@ float epsilon = 0.1;
 float tolerance = 0.01;
 int DELAY_CAPTION = 1500;
 int DELAY_BLUR = 100;
-int MAX_KERNEL_LENGTH = 8;
+int MAX_KERNEL_LENGTH = 9;
 
-double alpha = 3; // contrast control between [1.0-3.0] 
-int beta = 30;  // brightness control between [0-100]
+double alpha = 2.5; // contrast control between [1.0-3.0]
+int beta = 60;  // brightness control between [0-100]
 
 int const max_lowThreshold = 100;
 int ratio = 3;
@@ -465,7 +465,7 @@ void cannyTest() {
 
 int main(int argc, const char * argv[])
 {
-    src = imread( "springlight.jpg" );
+    src = imread( "mushroom.jpg" );
     if( !src.data )
     {
         cout << "image failed to load" << endl;
@@ -497,7 +497,7 @@ int main(int argc, const char * argv[])
     
 
     imshow( "WATERCOLOR IMAGE", dst3 );
-    imwrite("springlight2.jpg", dst3);
+    imwrite("mushroom2.jpg", dst3);
     waitKey(0);
 
     return 0;
